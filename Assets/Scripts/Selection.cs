@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpItem : Selecction.cs
+public  class Selection : MonoBehaviour  
 {
     public enum ItemType { Coin, HealthPack, Weapon }
     public ItemType itemType;

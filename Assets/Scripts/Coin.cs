@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUpCoin : coiin.сs
+public class  Coin : MonoBehaviour 
 {
     // Опціонально: можна додати посилання на менеджер грошей або UI, щоб збільшувати рахунок
 
