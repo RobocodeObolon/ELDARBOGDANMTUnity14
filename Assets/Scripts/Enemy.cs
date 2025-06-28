@@ -53,13 +53,12 @@ public class EnemyPatrol : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool movingRight = true;
-}
-     void Start()
-       {
-            rb = GetComponent<Rigidbody2D>();
-          }
-         rb = GetComponent<Rigidbody2D>();
-       
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+
 
     void Update()
     {
@@ -86,4 +85,4 @@ public class EnemyPatrol : MonoBehaviour
         transform.localScale = scaler;
     }
 
-    private void OnCollisionEnter2D(Collision2D collisio
+}

@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private Animator animator;
     private SpriteRenderer spriteRenderer;
     private bool isGrounded;
     private bool isDead = false;  // Додано для перевірки, чи мертвий гравець
@@ -18,7 +17,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
@@ -44,10 +42,6 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
-
-        // Анімація
-        animator.SetFloat("Speed", Mathf.Abs(moveInput));
-        animator.SetBool("isGrounded", isGrounded);
     }
 
     // Обробка зіткнення з ворогом
@@ -65,7 +59,6 @@ public class PlayerController : MonoBehaviour
     {
         isDead = true;
         rb.velocity = Vector2.zero;
-        animator.SetTrigger("Death");
         // Тут можна додати логіку рестарту рівня або показу меню смерті
     }
 }

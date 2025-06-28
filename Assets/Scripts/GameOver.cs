@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverTrigger : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
     [SerializeField] private string gameOverSceneName = "GameOverScene";
 
